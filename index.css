@@ -3,69 +3,47 @@
 }
 
 body {
-    margin: 50px;
-    background-color: #0B2434;
+    margin-top: 30px;
+    height: 100vh;
+    background: linear-gradient(#0caa88, #111);
+    padding: 20px;
     font-family: 'Karla', sans-serif;
-    display: block;
+    display: flex;
+    align-items: top;
+    justify-content: center;
 }
 
 main {
     background-color: #F5F5F5;
-    height: 500px;
+    height: 400px;
     max-width: 500px;
     border-radius: 5px;
-    padding: 30px 60px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-    justify-content: center;
 }
-
-@media screen and (max-width: 500px) {
-    .main {
-        height: 300px;
-        width: 300px;
-    }
-} ;
 
 .title {
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin: 0;
+    color: #0caa88;
+    font-weight: bold;
 }
-
-@media screen and (max-width: 500px) {
-    .title {
-        font-size: 2rem;
-    }
-} ;
 
 .instructions {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
-    margin: 0;
-    padding: 0;
-    font-size: 1rem;
-    align-content: center;
-}
-
-@media screen and (max-width: 500px) {
-    .instructions {
-        font-size: 0.8rem;
-    }
+    margin-top: 0;
+    text-align: center;
 }
 
 .dice-container {
     display: grid;
     grid-template: auto auto / repeat(5, 1fr);
     gap: 20px;
-    margin-bottom: 40px;
-    -ms-grid-layer: initial;
-}
-
-@media screen and (max-width: 500px) {
-    .dice-container {
-        gap: 15px;
-    }
+    margin-bottom: 15px;
 }
 
 .die-face {
@@ -83,62 +61,23 @@ main {
     font-size: 2rem;
 }
 
-@media screen and (max-width: 500px) {
-    .die-face {
-        height: 35px;
-        width: 35px
-    }
-
-    .die-num {
-        font-size: 1.2rem;
-    }
+.plays-count, .record {
+    margin: 2px;
+    font-style: italic;
 }
-
-.plays-count {
-    margin-top: 0px;
-    padding-top: 0px;
-}
-
-.record {
-    margin-top: 0;
-    margin-bottom: 10px;
-}
-
-@media screen and (max-width: 500px) {
-    .plays-count {
-        font-size: 0.8rem;
-    }
-
-    .record {
-        font-size: 0.8rem;
-    }
-} ;
 
 .roll-dice {
     height: 50px;
     width: 150px;
     border: none;
     border-radius: 6px;
-    background-color: #5035FF;
+    background-color: #0caa88;
     color: white;
     font-size: 1.2rem;
     font-family: 'Karla', sans-serif;
     cursor: pointer;
+    margin-top: 5px;
 }
-
-@media screen and (max-width: 400px) {
-    .roll-dice {
-        height: 30px;
-        width: 100px;
-        border: none;
-        border-radius: 6px;
-        background-color: #5035FF;
-        color: white;
-        font-size: 0.8rem;
-        font-family: 'Karla', sans-serif;
-        cursor: pointer;
-    }
-} ;
 
 .roll-dice:focus {
     outline: none;
@@ -146,4 +85,47 @@ main {
 
 .roll-dice:active {
     box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
+}
+
+@media screen and (max-width: 500px) {
+    main {
+        width: 300px;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    } 
+
+    .instructions {
+        font-size: 0.8rem;
+        padding-top: 5px;
+    }
+
+    .dice-container {
+        gap: 15px;
+    }
+
+    .die-face {
+        width: 35px;
+        height: 35px;
+    }
+
+    .die-num {
+        font-size: 1.4rem;
+    }
+
+    .plays-count {
+        font-size: 0.8rem;
+    }
+
+    .record {
+        font-size: 0.8rem;
+    }
+
+    .roll-dice {
+        height: 30px;
+        width: 100px;
+        font-size: 0.8rem;
+        border-radius: 2px;
+    }
 }
